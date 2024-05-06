@@ -1,7 +1,49 @@
 #root {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
   text-align: center;
+
+}
+
+/* NavBar Section */
+
+#div-nav{ 
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  background-color: #D95D0F;
+  width: 1280px;
+  height: 100px;
+
+}
+
+#div-nav p {
+  color: #000;
+  font-weight: bolder;
+  margin-left: 4rem;
+
+}
+
+#div-search {
+
+}
+
+#div-search input{
+  margin-right: 4rem;
+  border-radius: 0.7rem;
+  width: 10rem;
+  height: 2.5rem;
+  background-color:#D9D9D9;
+  text-align: center;
+  font-weight: 600;
+  font-size: x-small;
+  border: 0.5px solid black;
+
+}
+
+#div-search input::placeholder {
+  color: #000
+
+
 }
 
