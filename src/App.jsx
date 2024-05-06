@@ -1,14 +1,19 @@
-import { useState } from 'react'
+import { useState } from 'react';
+import NavBar from "./components/NavBar";
+import ResultList from "./components/ResultList";
+import Footer from './components/Footer';
+
 import './App.css'
 
-function App() {
- 
+export default function App(){
 
-  return (
-    <>
- 
-    </>
+  const [searchQuery, setSearchQuery]=useState("");
+
+  return(
+    <div>
+      <NavBar setSearchQuery={setSearchQuery}/>
+      <ResultList searchQuery={searchQuery} />
+      <Footer />
+    </div>
   )
 }
-
-export default App
