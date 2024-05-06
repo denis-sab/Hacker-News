@@ -10,7 +10,25 @@ const Footer = ({ totalPages }) => {
     const renderPageNumbers = () => {
         const pageNumbers = [];
 
-        for (let i = 1; i <= totalPages; i++) {
+        // Display ellipsis if there are more than 5 pages and currentPage is not within the first two pages
+        if (totalPages > 5 && currentPage > 2) {
+            pageNumbers.push(
+                <span key="ellipsisStart" className="ellipsis">
+                    ...
+                </span>
+            );
+        }
+
+        // Determine the range of page numbers to display
+        let start = Math.max(1, currentPage - 2);
+        let end = Math.min(totalPages, start + 4);
+
+        // Adjust the start and end if needed to ensure there are always 5 page numbers displayed
+        if (end - start < 4) {
+            start = Math.max(1, end - 4);
+        }
+
+        for (let i = start; i <= end; i++) {
             pageNumbers.push(
                 <a
                     key={i}
@@ -20,6 +38,15 @@ const Footer = ({ totalPages }) => {
                 >
                     {i}
                 </a>
+            );
+        }
+
+        // Display ellipsis if there are more than 5 pages and currentPage is not within the last two pages
+        if (totalPages > 5 && currentPage < totalPages - 1) {
+            pageNumbers.push(
+                <span key="ellipsisEnd" className="ellipsis">
+                    ...
+                </span>
             );
         }
 
