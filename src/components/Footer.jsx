@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
-const FooterPagination = ({ totalPages }) => {
+const Footer = ({ totalPages }) => {
     const [currentPage, setCurrentPage] = useState(1);
 
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
-        // You can add logic here to fetch data for the new page
     };
 
     const renderPageNumbers = () => {
@@ -48,4 +47,4 @@ const FooterPagination = ({ totalPages }) => {
     );
 };
 
-export default FooterPagination;
+export default Footer;

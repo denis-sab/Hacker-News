@@ -22,3 +22,27 @@ body {
   min-height: 100vh;
 }
 
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  color: orange;
+  text-decoration: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.pagination a:hover {
+  background-color: #f0f0f0;
+  color: orange; 
+}
+
+.pagination .active {
+  background-color: orange;
+  color: white;
+}
