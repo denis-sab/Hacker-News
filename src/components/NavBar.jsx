@@ -3,6 +3,7 @@ import "../index.css"
 function NavBar () {
 
     return (
+        
 
         <div id="div-nav">
             <div id="div-logo">
