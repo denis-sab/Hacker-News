@@ -20,7 +20,7 @@ const ResultList = ({ searchQuery }) => {
   const fetchItems = async (query = '') => {
     try {
       // Fetch data based on the search query
-      const response = await fetch(`https://hn.algolia.com/api/v1/search?tags=front_page${query ? `&query=${query}` : ''}`);
+      const response = await fetch(`https://hn.algolia.com/api/v1/search?${query ? `&query=${query}` : ''}`);
       if (!response.ok) {
         throw new Error('Failed to fetch data');
       }

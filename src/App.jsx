@@ -4,8 +4,6 @@ import ResultList from "./components/ResultList";
 import Footer from './components/Footer';
 
 import './App.css'
-import NavBar from './components/NavBar'
-import Footer from './components/Footer'
 
 export default function App(){
 

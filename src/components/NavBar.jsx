@@ -1,8 +1,20 @@
 import "../index.css"
+import { useState, useEffect } from "react";
 
-function NavBar () {
+
+function NavBar ({setSearchQuery}) {
+const [input, setInput] = useState ("")
+
+function onSubmit (e) {
+    e.preventDefault()
+    setSearchQuery(input)
+}
+
 
     return (
+
+       
+    
         
 
         <div id="div-nav">
@@ -11,7 +23,10 @@ function NavBar () {
             </div>
 
             <div id="div-search">
-                <input type="text"  placeholder="Search Topic"/>
+                <form onSubmit={onSubmit}>
+                <input type="text" onChange={(e) => setInput(e.target.value) }  value={input} placeholder="Search Topic"/>
+                <button>Search</button>
+                </form>
             </div>
         </div>
         
