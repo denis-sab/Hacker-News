@@ -24,10 +24,6 @@
 
 }
 
-#div-search {
-
-}
-
 #div-search input{
   margin-right: 4rem;
   border-radius: 0.7rem;
@@ -84,3 +80,51 @@ ul{
   p{
     margin-top:5px;
   }
+
+
+/*Footer Starts*/
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.pagination a,
+.pagination span {
+  margin: 0 5px;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.pagination .page-box {
+  display: inline-block;
+  padding: 4px 10px;
+  border: 1px solid #D95D0F;
+  color: white;
+  background-color: #D95D0F;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination a.active,
+.pagination span.active {
+  font-weight: bold;
+}
+
+.pagination .ellipsis {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.pagination-link {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+
+
+/*Footer Ends*/
+
